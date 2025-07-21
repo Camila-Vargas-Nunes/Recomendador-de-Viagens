@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 // Função para ler variáveis do arquivo .env
 function readEnvFile() {
@@ -100,8 +100,8 @@ function main() {
 }
 
 // Executar se chamado diretamente
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
     main();
 }
 
-module.exports = { readEnvFile, setVercelEnvVars, deploy }; 
+export { readEnvFile, setVercelEnvVars, deploy }; 

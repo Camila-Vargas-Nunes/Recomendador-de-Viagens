@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 // Importar funções do setup-vercel-env.js
-const { readEnvFile, setVercelEnvVars } = require('./setup-vercel-env.js');
+import { readEnvFile, setVercelEnvVars } from './setup-vercel-env.js';
 
 function main() {
     console.log('🔧 Verificando variáveis de ambiente antes do push...\n');
@@ -46,6 +46,6 @@ function main() {
     console.log('✅ Push pode continuar!');
 }
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
     main();
 } 
