@@ -1,4 +1,4 @@
-# 🌍 Travel Recommender - Recomendador Inteligente de Destinos de Viagem
+# 🌍 Recomendador Inteligente de Destinos de Viagem
 
 Um sistema inteligente que utiliza Inteligência Artificial para recomendar destinos de viagem personalizados baseados nas preferências do usuário.
 
